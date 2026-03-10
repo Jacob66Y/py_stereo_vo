@@ -12,7 +12,7 @@ The current implementation supports the **KITTI Odometry Dataset** and provides 
 
 A short demonstration of the system running on a KITTI sequence is shown below.
 
-[demo video](https://github.com/Jacob66Y/py_stereo_vo/blob/local_ba/demo_trim.mp4)
+[demo video](https://github.com/Jacob66Y/py_stereo_vo/blob/github_upload/demo_trim.mp4)
 
 ---
 
