@@ -1,0 +1,73 @@
+dataset:
+  root: "/home/jacob/myslam/datasets/KITTI/greyscale_kitti"
+  sequence: "00"
+  input_mode: "gray_test"
+
+tracker:
+  max_frames: null
+  max_corners: 3000
+  quality_level: 0.01
+  min_distance: 7
+  block_size: 7
+  lk_win_size: 21
+  lk_max_level: 3
+  lk_max_error: 20.0
+
+stereo:
+  min_disparity: 0
+  num_disparities: 128
+  block_size: 7
+  min_depth: 0.5
+  max_depth: 60.0
+  min_valid_disparity: 1.0
+
+pnp:
+  min_points: 20
+  reprojection_error: 3.0
+  confidence: 0.999
+  iterations: 100
+
+keyframe:
+  min_tracked_landmarks: 120
+  translation_thresh: 0.35
+  rotation_thresh_deg: 8.0
+  frame_gap: 4
+  max_frame_gap: 10
+  low_track_ratio_thresh: 0.40
+  new_feature_mask_radius: 15
+  max_new_landmarks: 150
+  min_new_landmarks: 30
+  grid_rows: 4
+  grid_cols: 6
+  max_per_cell: 8
+
+quality:
+  min_landmark_observations_for_pnp: 3
+  min_landmark_observations_for_ba: 3
+  protected_landmark_min_observations: 4
+  max_landmark_track_failures: 3
+  max_landmark_reproj_error: 5.0
+  stale_landmark_age: 15
+  reproj_error_ema_alpha: 0.2
+
+backend:
+  enable_local_ba: true
+  ba_every_n_keyframes: 3
+  local_ba_window_size: 4
+  local_ba_max_nfev: 8
+  local_ba_huber_delta: 5.0
+  local_ba_min_observations: 25
+  local_ba_verbose: false
+  local_ba_max_version_lag: 50
+
+output:
+  save_dir: outputs
+  save_keyframes: true
+  save_trajectory: true
+  save_keyframe_trajectory: true
+  save_corrected_trajectory: true
+  show_plot: true
+  live_view: true
+  show_separate_traj_window: true
+  viewer_landmark_limit: 1500
+  viewer_topdown_update_every: 3

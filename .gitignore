@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+.env/
+
+outputs/
+
+# Dataset
+dataset/
+data/
+*.bag
+*.db3
+
+# Logs / caches
+*.log
+.cache/
+tmp/
+temp/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / outputs
+build/
+dist/
+results/
+output/
